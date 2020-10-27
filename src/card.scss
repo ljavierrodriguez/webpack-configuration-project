@@ -1,0 +1,18 @@
+$main-font-color: red;
+$secondary-font-color: blue;
+
+.card {
+    background-color: white;
+
+    .card-header {
+        color: $main-font-color;
+    }
+
+    .card-body {
+        color: $secondary-font-color;
+    }
+
+    .card-footer {
+        color: pink;
+    }
+}
