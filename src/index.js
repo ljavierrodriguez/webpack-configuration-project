@@ -14,4 +14,4 @@ import { Home } from './home.jsx';
 //console.log("Hello from Webpack");
 //console.log("Hola mundo");
 
-ReactDOM.render(<Home />, document.querySelector("#root"));
+ReactDOM.render(<Home show={true} />, document.querySelector("#root"));
