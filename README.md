@@ -37,3 +37,12 @@
 
 
 ### Instalar React y ReactDOM
+
+    $ npm i react react-dom babel-loader @babel/core @babel/preset-env @babel/preset-react @babel/plugin-proposal-class-properties --save-dev
+
+### Crear archivo .babelrc
+
+    {
+        "presets": [],
+        "plugins": []
+    }
