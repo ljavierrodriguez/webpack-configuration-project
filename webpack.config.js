@@ -16,7 +16,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/,
                 use: [
                     {
                         loader: 'file-loader',
@@ -26,18 +26,18 @@ module.exports = {
                         }
                     }
                 ]
-            },
+            },  // for fonts
             {
                 test: /\.(scss|css)$/i,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
-            },
+            }, // for css or scss
             {
                 test: /\.(png|jpe?g|gif)$/i,
                 loader: 'file-loader',
                 options: {
                     name: 'img/[name].[ext]',
                 },
-            },
+            }, // for images
         ]
     },
     plugins: [
@@ -50,7 +50,8 @@ module.exports = {
         }),
         new webpack.ProvidePlugin({
             $: 'jquery',
-            jQuery: 'jquery'
+            jQuery: 'jquery',
+            Popper: 'popper.js'
         }),
         new CleanWebpackPlugin(),
     ]

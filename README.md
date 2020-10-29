@@ -34,3 +34,6 @@
 ### Instalar jquery, popper.js, bootstrap and fontawesome
 
     $ npm i jquery popper.js bootstrap @fortawesome/fontawesome-free --save
+
+
+### Instalar React y ReactDOM
